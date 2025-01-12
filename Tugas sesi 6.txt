@@ -1,0 +1,52 @@
+Tugas sesi 6
+Jelaskan peran Vue.js directives dalam membangun aplikasi web interaktif. Sertakan contoh
+penggunaan seperti v-if, v-for, v-bind, dan v-model. Jelaskan bagaimana masing-masing
+directive membantu dalam manipulasi DOM.
+Poin Penting untuk Essay:
+• Definisi Vue directives.
+• Peran directives dalam binding data dengan DOM.
+• Contoh kode untuk setiap directive yang dibahas.
+• Bandingkan pendekatan menggunakan directives dengan metode manipulasi DOM
+manual (misalnya, dengan JavaScript murni).
+Jawab
+Vue.js directives adalah atribut khusus yang digunakan untuk memberikan perilaku tertentu pada
+elemen DOM di dalam aplikasi berbasis Vue.js. Direktif ini memiliki peran penting dalam
+membangun aplikasi web yang dinamis dan interaktif karena mereka memungkinkan
+pengembang untuk memanipulasi DOM secara deklaratif berdasarkan data atau logika aplikasi.
+• Definisi Vue.js Directives
+Vue.js directives adalah atribut khusus pada elemen HTML yang dimulai dengan prefix
+v- yang memberikan instruksi khusus kepada Vue tentang bagaimana mengubah atau
+memanipulasi DOM berdasarkan data yang terikat di Vue instance. Contohnya, v-if
+untuk kondisi, v-for untuk loop, dan sebagainya.
+• Peran Vue Directives dalam Binding Data dengan DOM
+Vue directives berfungsi untuk menghubungkan data dari Vue instance dengan elemen
+DOM secara deklaratif. Dengan directives, kita dapat mengontrol elemen DOM
+berdasarkan perubahan state data secara reaktif tanpa perlu menulis logika manipulasi
+DOM manual. Hal ini membuat kode lebih bersih, ringkas, dan mudah dipelihara.
+
+Contoh nya nanti ada di vscode
+Perbandingan dengan Manipulasi DOM Manual
+Pendekatan dengan Vue Directives:
+• Lebih deklaratif, fokus pada "apa yang dilakukan" alih-alih "bagaimana melakukannya."
+• Reaktif: Perubahan data langsung tercermin di DOM tanpa perlu update manual.
+• Kode lebih sederhana, bersih, dan efisien.
+Manipulasi DOM Manual dengan JavaScript Murni:
+• Lebih imperatif, membutuhkan logika untuk menemukan dan mengubah elemen DOM
+secara manual.
+• Tidak reaktif: Perubahan state tidak otomatis memengaruhi DOM.
+• Kode menjadi lebih kompleks dan sulit dipelihara saat aplikasi tumbuh.
+Contoh perbandingan:
+• Vue.js dengan v-if:
+<p v-if="isVisible">Teks ini hanya muncul jika `isVisible` true.</p>
+JavaScript Murni:
+• javascript
+const paragraph = document.createElement('p');
+paragraph.textContent = 'Teks ini hanya muncul jika `isVisible` true.';
+if (isVisible) {
+document.body.appendChild(paragraph);
+} else {
+document.body.removeChild(paragraph);
+}
+Vue.js menghilangkan kebutuhan untuk logika seperti appendChild atau removeChild dan secara
+otomatis menangani update DOM berdasarkan perubahan state, membuatnya lebih efisien dan
+ramah pengembang.
